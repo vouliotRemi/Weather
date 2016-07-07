@@ -1,0 +1,24 @@
+<ion-view>
+	<ion-content overflow-scroll="false">
+		<div>
+			<label class="item-input">
+				<span class="input-label city">Ville :</span>
+
+				<input type="text" placeholder="Paris,fr" ng-model="search">
+			</label>
+
+			<button class="button icon ion-search" ng-click="loadWeather(search)"></button>
+		</div>
+	    <div ng-if="state">
+	        <img src="{{weatherData.icon}}"/>
+	        
+	        <label>{{weatherData.main}}</label>
+	        
+	        <div>Ville : {{weatherData.city}}</div>
+	        
+	        <div>Conditions courantes : {{weatherData.description}}</div>
+	        
+	        <div>{{weatherData.temp}} °C</div>
+    	</div>
+	</ion-content>
+</ion-view>
